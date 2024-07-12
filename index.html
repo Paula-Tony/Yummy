@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="imgs/logo.png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/output.css" />
+    <title>Yummy</title>
+  </head>
+  <body class="bg-zinc-900 text-white pl-[72px]">
+    <!--! Start Loader -->
+    <div
+      id="loader"
+      class="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-50 z-10"
+    >
+      <div class="w-16 h-16 animate-spin">
+        <div
+          class="w-full h-full rounded-full border-t-4 border-b-4 border-white"
+        ></div>
+      </div>
+    </div>
+    <!--! End Loader -->
+
+    <!--! Start Nav -->
+    <nav class="fixed z-20 flex min-h-screen left-[-164.625px]">
+      <div
+        id="nav-tab"
+        class="bg-zinc-900 text-white p-5 flex flex-col justify-between"
+      >
+        <ul id="links" class="overflow-hidden">
+          <li id="search-link" class="mb-5 relative top-52 cursor-pointer">
+            Search
+          </li>
+          <li
+            id="categories-link"
+            id=""
+            class="mb-5 relative top-52 cursor-pointer"
+          >
+            Categories
+          </li>
+          <li id="area-link" class="mb-5 relative top-52 cursor-pointer">
+            Area
+          </li>
+          <li id="ingredients-link" class="mb-5 relative top-52 cursor-pointer">
+            Ingredients
+          </li>
+          <li id="contact-link" class="relative top-52 cursor-pointer">
+            Contact Us
+          </li>
+        </ul>
+        <div>
+          <ul class="flex gap-3 text-xl mb-2">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-globe"></i></a>
+            </li>
+          </ul>
+          <p class="text-sm">Copyright © 2024<br />All Rights Reserved.</p>
+        </div>
+      </div>
+      <div
+        class="bg-slate-100 text-black p-3 flex flex-col items-center justify-between text-xl"
+      >
+        <a href="index.html"
+          ><img class="w-12" src="imgs/logo.png" alt="yummy logo"
+        /></a>
+        <button id="menu-icon" class="text-3xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--! End Nav -->
+
+    <!--! Start Main -->
+    <main class="py-5">
+      <div class="container mx-auto px-3 md:px-5">
+        <div id="search-inputs" class="hidden mx-auto max-w-screen-sm mb-4">
+          <input
+            id="name-input"
+            class="bg-zinc-600 w-full rounded-md focus:outline-2 outline-yellow-500 p-3 mb-4"
+            type="text"
+            placeholder="Search By Name"
+          />
+          <input
+            id="first-letter-input"
+            maxlength="1"
+            class="bg-zinc-600 w-full rounded-md focus:outline-2 outline-yellow-500 p-3"
+            type="text"
+            placeholder="Search By First Letter"
+          />
+        </div>
+        <div id="contact" class="hidden mx-auto max-w-screen-sm">
+          <h2 class="text-center text-4xl mb-4 font-bold">Contact Us</h2>
+          <form >
+            <input
+              class="block focus:outline-0 border-2  bg-zinc-600 w-full rounded-md  p-3 mb-4"
+              placeholder="Enter Your Name"
+              type="text"
+              id="userName"
+            />
+            <input
+              class="block bg-zinc-600 border-2  w-full rounded-md focus:outline-0 p-3 mb-4"
+              placeholder="Enter Your Email"
+              type="email"
+              id="email"
+            />
+            <input
+              class="block bg-zinc-600 border-2  w-full rounded-md focus:outline-0 p-3 mb-4"
+              placeholder="Enter Your Age"
+              type="text"
+              id="age"
+            />
+            <input
+              class="block bg-zinc-600 border-2  w-full rounded-md focus:outline-0 p-3 mb-4"
+              placeholder="Enter Your Phone"
+              type="text"
+              id="phone"
+            />
+            <input
+              class="block bg-zinc-600 border-2  w-full rounded-md focus:outline-0 p-3 mb-4"
+              placeholder="Enter Your Password"
+              type="password"
+              id="password"
+            />
+            <input
+              class="block bg-zinc-600 border-2  w-full rounded-md focus:outline-0 p-3 mb-4"
+              placeholder="Re-enter Your Password"
+              type="password"
+              id="rePassword"
+            />
+            <button
+              class="cursor-pointer disabled:cursor-not-allowed disabled:bg-red-500 bg-green-500 py-3 px-6 font-bold transition-all duration-300 rounded-md mx-auto block"
+              id="submit"
+              type="submit"
+              disabled
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div id="data" class="flex flex-wrap"></div>
+      </div>
+    </main>
+    <!--! End Main -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
